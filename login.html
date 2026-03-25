@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - Student Dashboard SaaS</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/global-styles.css">
+  
+  <!-- Login Page Styles -->
+  <link rel="stylesheet" href="css/style-login.css">
+</head>
+<body>
+  <main class="login-page-main-container">
+    <section class="login-page-content-wrapper">
+      <!-- Left Side - Branding -->
+      <div class="login-page-branding-section">
+        <div class="login-page-branding-logo-container">
+          <svg class="login-page-branding-logo-icon" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="64" height="64" rx="12" fill="#0EA5E9"/>
+            <path d="M20 32L28 40L44 24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h1 class="login-page-branding-title">Student Dashboard</h1>
+        <p class="login-page-branding-subtitle">Votre espace étudiant tout-en-un</p>
+        <div class="login-page-branding-features-list">
+          <div class="login-page-branding-feature-item">
+            <span class="login-page-branding-feature-icon">📚</span>
+            <span class="login-page-branding-feature-text">Suivez vos cours</span>
+          </div>
+          <div class="login-page-branding-feature-item">
+            <span class="login-page-branding-feature-icon">📊</span>
+            <span class="login-page-branding-feature-text">Consultez vos notes</span>
+          </div>
+          <div class="login-page-branding-feature-item">
+            <span class="login-page-branding-feature-icon">📅</span>
+            <span class="login-page-branding-feature-text">Gérez votre emploi du temps</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Side - Login Form -->
+      <div class="login-page-form-section">
+        <div class="login-page-form-container">
+          <h2 class="login-page-form-title">Bon retour !</h2>
+          <p class="login-page-form-subtitle">Connectez-vous à votre espace étudiant</p>
+          
+          <form id="loginPageLoginFormElement" class="login-page-form-element" novalidate>
+            <!-- Email Input -->
+            <div class="login-page-form-input-group">
+              <label for="loginPageFormEmailInput" class="login-page-form-input-label">Adresse email</label>
+              <input 
+                type="email" 
+                id="loginPageFormEmailInput" 
+                class="login-page-form-input-email-field" 
+                placeholder="etudiant@exemple.com"
+                required
+                autocomplete="email"
+              >
+              <span id="loginPageFormEmailErrorMessage" class="login-page-form-error-message hidden">Veuillez entrer une adresse email valide</span>
+            </div>
+            
+            <!-- Password Input -->
+            <div class="login-page-form-input-group">
+              <label for="loginPageFormPasswordInput" class="login-page-form-input-label">Mot de passe</label>
+              <input 
+                type="password" 
+                id="loginPageFormPasswordInput" 
+                class="login-page-form-input-password-field" 
+                placeholder="••••••••"
+                required
+                autocomplete="current-password"
+              >
+              <span id="loginPageFormPasswordErrorMessage" class="login-page-form-error-message hidden">Le mot de passe doit contenir au moins 6 caractères</span>
+            </div>
+            
+            <!-- Remember Me & Forgot Password -->
+            <div class="login-page-form-options-row">
+              <label class="login-page-form-remember-me-label">
+                <input 
+                  type="checkbox" 
+                  id="loginPageFormRememberMeCheckbox" 
+                  class="login-page-form-remember-me-checkbox"
+                >
+                <span class="login-page-form-remember-me-text">Se souvenir de moi</span>
+              </label>
+              <a href="#" class="login-page-form-forgot-password-link">Mot de passe oublié ?</a>
+            </div>
+            
+            <!-- Submit Button -->
+            <button 
+              type="submit" 
+              id="loginPageFormSubmitButton" 
+              class="login-page-form-submit-button"
+            >
+              Se connecter
+            </button>
+            
+            <!-- Form Error Message -->
+            <div id="loginPageFormGeneralErrorMessage" class="login-page-form-general-error-message hidden">
+              Échec de la connexion. Veuillez vérifier vos identifiants.
+            </div>
+          </form>
+          
+          <!-- Divider -->
+          <div class="login-page-form-divider">
+            <span class="login-page-form-divider-text">ou</span>
+          </div>
+          
+          <!-- Register Link -->
+          <p class="login-page-form-register-text">
+            Pas encore de compte ? 
+            <a href="#" class="login-page-form-register-link">S'inscrire</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Login Page Script -->
+  <script src="js/script-login.js"></script>
+</body>
+</html>

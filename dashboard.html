@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord - Student Dashboard SaaS</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/global-styles.css">
+  
+  <!-- Dashboard Page Styles -->
+  <link rel="stylesheet" href="css/style-dashboard.css">
+</head>
+<body>
+  <!-- Dashboard Page Main Container -->
+  <div class="dashboard-page-main-container">
+    <!-- Sidebar Navigation -->
+    <aside class="dashboard-page-sidebar-navigation">
+      <div class="dashboard-page-sidebar-header">
+        <div class="dashboard-page-sidebar-logo-container">
+          <svg class="dashboard-page-sidebar-logo-icon" width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="64" height="64" rx="12" fill="#0EA5E9"/>
+            <path d="M20 32L28 40L44 24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="dashboard-page-sidebar-logo-text">Student Dashboard</span>
+        </div>
+      </div>
+      
+      <nav class="dashboard-page-sidebar-navigation-menu">
+        <a href="dashboard.html" class="dashboard-page-sidebar-navigation-link dashboard-page-sidebar-navigation-link-active">
+          <span class="dashboard-page-sidebar-navigation-icon">📊</span>
+          <span class="dashboard-page-sidebar-navigation-text">Tableau de bord</span>
+        </a>
+        <a href="courses.html" class="dashboard-page-sidebar-navigation-link">
+          <span class="dashboard-page-sidebar-navigation-icon">📚</span>
+          <span class="dashboard-page-sidebar-navigation-text">Cours</span>
+        </a>
+        <a href="grades.html" class="dashboard-page-sidebar-navigation-link">
+          <span class="dashboard-page-sidebar-navigation-icon">📈</span>
+          <span class="dashboard-page-sidebar-navigation-text">Notes</span>
+        </a>
+        <a href="schedule.html" class="dashboard-page-sidebar-navigation-link">
+          <span class="dashboard-page-sidebar-navigation-icon">📅</span>
+          <span class="dashboard-page-sidebar-navigation-text">Emploi du temps</span>
+        </a>
+        <a href="profile.html" class="dashboard-page-sidebar-navigation-link">
+          <span class="dashboard-page-sidebar-navigation-icon">👤</span>
+          <span class="dashboard-page-sidebar-navigation-text">Profil</span>
+        </a>
+      </nav>
+      
+      <div class="dashboard-page-sidebar-footer">
+        <a href="login.html" class="dashboard-page-sidebar-logout-link">
+          <span class="dashboard-page-sidebar-logout-icon">🚪</span>
+          <span class="dashboard-page-sidebar-logout-text">Déconnexion</span>
+        </a>
+      </div>
+    </aside>
+    
+    <!-- Main Content Area -->
+    <main class="dashboard-page-main-content">
+      <!-- Header -->
+      <header class="dashboard-page-content-header">
+        <div class="dashboard-page-header-welcome-section">
+          <h1 class="dashboard-page-header-welcome-title">Bonjour, Étudiant ! 👋</h1>
+          <p class="dashboard-page-header-welcome-subtitle">Voici un aperçu de vos performances académiques</p>
+        </div>
+        <div class="dashboard-page-header-actions">
+          <button class="dashboard-page-header-notification-button" title="Notifications">
+            <span class="dashboard-page-header-notification-icon">🔔</span>
+            <span class="dashboard-page-header-notification-badge">3</span>
+          </button>
+        </div>
+      </header>
+      
+      <!-- Statistics Cards Grid -->
+      <section class="dashboard-page-statistics-cards-grid-container">
+        <!-- Card 1: Total Courses -->
+        <div class="dashboard-page-statistics-card-container">
+          <div class="dashboard-page-statistics-card-header">
+            <span class="dashboard-page-statistics-card-icon">📚</span>
+            <span class="dashboard-page-statistics-card-title">Total Cours</span>
+          </div>
+          <div class="dashboard-page-statistics-card-body">
+            <span class="dashboard-page-statistics-card-value" id="dashboardStatisticsTotalCoursesValue">8</span>
+            <span class="dashboard-page-statistics-card-description">Cours en cours ce semestre</span>
+          </div>
+        </div>
+        
+        <!-- Card 2: Average Grade -->
+        <div class="dashboard-page-statistics-card-container">
+          <div class="dashboard-page-statistics-card-header">
+            <span class="dashboard-page-statistics-card-icon">📊</span>
+            <span class="dashboard-page-statistics-card-title">Moyenne Générale</span>
+          </div>
+          <div class="dashboard-page-statistics-card-body">
+            <span class="dashboard-page-statistics-card-value dashboard-page-statistics-card-value-success" id="dashboardStatisticsAverageGradeValue">15.2/20</span>
+            <span class="dashboard-page-statistics-card-description">+1.2 par rapport au mois dernier</span>
+          </div>
+        </div>
+        
+        <!-- Card 3: Completed Assignments -->
+        <div class="dashboard-page-statistics-card-container">
+          <div class="dashboard-page-statistics-card-header">
+            <span class="dashboard-page-statistics-card-icon">✅</span>
+            <span class="dashboard-page-statistics-card-title">Devoirs Rendus</span>
+          </div>
+          <div class="dashboard-page-statistics-card-body">
+            <span class="dashboard-page-statistics-card-value" id="dashboardStatisticsCompletedAssignmentsValue">24/32</span>
+            <span class="dashboard-page-statistics-card-description">75% des devoirs rendus</span>
+          </div>
+        </div>
+        
+        <!-- Card 4: Attendance Rate -->
+        <div class="dashboard-page-statistics-card-container">
+          <div class="dashboard-page-statistics-card-header">
+            <span class="dashboard-page-statistics-card-icon">🎯</span>
+            <span class="dashboard-page-statistics-card-title">Taux de Présence</span>
+          </div>
+          <div class="dashboard-page-statistics-card-body">
+            <span class="dashboard-page-statistics-card-value dashboard-page-statistics-card-value-success" id="dashboardStatisticsAttendanceRateValue">92%</span>
+            <span class="dashboard-page-statistics-card-description">Excellente assiduité</span>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Progress Chart Section -->
+      <section class="dashboard-page-progress-chart-section-container">
+        <div class="dashboard-page-progress-chart-header">
+          <h2 class="dashboard-page-progress-chart-title">Progression par Matière</h2>
+          <button class="dashboard-page-progress-chart-view-all-button">Voir tout</button>
+        </div>
+        
+        <div class="dashboard-page-progress-chart-grid-container" id="dashboardProgressChartGridContainer">
+          <!-- Progress cards will be dynamically generated by JavaScript -->
+        </div>
+      </section>
+      
+      <!-- Upcoming Classes Section -->
+      <section class="dashboard-page-upcoming-classes-section-container">
+        <div class="dashboard-page-upcoming-classes-header">
+          <h2 class="dashboard-page-upcoming-classes-title">Prochains Cours</h2>
+          <a href="schedule.html" class="dashboard-page-upcoming-classes-view-all-link">Voir l'emploi du temps →</a>
+        </div>
+        
+        <div class="dashboard-page-upcoming-classes-list-container" id="dashboardUpcomingClassesListContainer">
+          <!-- Class items will be dynamically generated by JavaScript -->
+        </div>
+      </section>
+      
+      <!-- Recent Grades Section -->
+      <section class="dashboard-page-recent-grades-section-container">
+        <div class="dashboard-page-recent-grades-header">
+          <h2 class="dashboard-page-recent-grades-title">Dernières Notes</h2>
+          <a href="grades.html" class="dashboard-page-recent-grades-view-all-link">Voir toutes les notes →</a>
+        </div>
+        
+        <div class="dashboard-page-recent-grades-table-container" id="dashboardRecentGradesTableContainer">
+          <!-- Grade rows will be dynamically generated by JavaScript -->
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <!-- Dashboard Page Script -->
+  <script src="js/script-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* ========================================
+   LOGIN PAGE STYLES
+   ======================================== */
+
+.login-page-main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  background-color: var(--color-background-gray-light);
+}
+
+.login-page-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* Left Side - Branding */
+.login-page-branding-section {
+  background: linear-gradient(135deg, var(--color-accent-blue-sky) 0%, #0284C7 100%);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.login-page-branding-logo-container {
+  margin-bottom: var(--spacing-lg);
+}
+
+.login-page-branding-logo-icon {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.login-page-branding-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-white);
+}
+
+.login-page-branding-subtitle {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.9;
+}
+
+.login-page-branding-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  width: 100%;
+  max-width: 320px;
+}
+
+.login-page-branding-feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.login-page-branding-feature-icon {
+  font-size: 1.25rem;
+}
+
+.login-page-branding-feature-text {
+  font-size: 0.95rem;
+  color: var(--color-white);
+}
+
+/* Right Side - Form */
+.login-page-form-section {
+  padding: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page-form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-page-form-title {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.login-page-form-subtitle {
+  color: var(--color-text-gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+.login-page-form-element {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.login-page-form-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.login-page-form-input-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-text-blue-almost-black);
+}
+
+.login-page-form-input-email-field,
+.login-page-form-input-password-field {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--color-border-gray);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.login-page-form-input-email-field:focus,
+.login-page-form-input-password-field:focus {
+  outline: none;
+  border-color: var(--color-accent-blue-sky);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.login-page-form-input-email-field.error,
+.login-page-form-input-password-field.error {
+  border-color: var(--color-error-red);
+}
+
+.login-page-form-error-message {
+  font-size: 0.875rem;
+  color: var(--color-error-red);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.login-page-form-error-message::before {
+  content: '⚠️';
+  font-size: 0.75rem;
+}
+
+.login-page-form-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.login-page-form-remember-me-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+}
+
+.login-page-form-remember-me-checkbox {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.login-page-form-remember-me-text {
+  color: var(--color-text-gray);
+}
+
+.login-page-form-forgot-password-link {
+  font-weight: 600;
+  color: var(--color-accent-blue-sky);
+}
+
+.login-page-form-forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+.login-page-form-submit-button {
+  background-color: var(--color-accent-blue-sky);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: var(--spacing-sm);
+}
+
+.login-page-form-submit-button:hover {
+  background-color: #0284C7;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.login-page-form-submit-button:active {
+  transform: translateY(0);
+}
+
+.login-page-form-submit-button:disabled {
+  background-color: var(--color-text-gray);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.login-page-form-general-error-message {
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  color: var(--color-error-red);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.login-page-form-divider {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.login-page-form-divider::before,
+.login-page-form-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border-gray);
+}
+
+.login-page-form-divider-text {
+  padding: 0 var(--spacing-sm);
+  color: var(--color-text-gray);
+  font-size: 0.875rem;
+}
+
+.login-page-form-register-text {
+  text-align: center;
+  color: var(--color-text-gray);
+  font-size: 0.95rem;
+}
+
+.login-page-form-register-link {
+  font-weight: 600;
+  color: var(--color-accent-blue-sky);
+}
+
+.login-page-form-register-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .login-page-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .login-page-branding-section {
+    padding: var(--spacing-lg);
+  }
+  
+  .login-page-form-section {
+    padding: var(--spacing-lg);
+  }
+}
