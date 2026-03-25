@@ -146,7 +146,7 @@ class GestionnaireProfil {
     
     // Simulation de sauvegarde
     console.log('Données utilisateur mises à jour:', this.donneesUtilisateur);
-    alert('✅ Informations personnelles enregistrées avec succès !');
+    alert('Informations personnelles enregistrees avec succes !');
   }
   
   /**
@@ -178,7 +178,7 @@ class GestionnaireProfil {
     
     // Simulation de changement de mot de passe
     console.log('Changement de mot de passe demandé');
-    alert('✅ Mot de passe changé avec succès !');
+    alert('Mot de passe change avec succes !');
     
     // Réinitialiser le formulaire
     this.formulaireSecurite.reset();
@@ -208,5 +208,5 @@ class GestionnaireProfil {
  */
 document.addEventListener('DOMContentLoaded', () => {
   const gestionnaireProfil = new GestionnaireProfil();
-  console.log('✅ Page de profil initialisée');
+  console.log('Page de profil initialisée');
 });

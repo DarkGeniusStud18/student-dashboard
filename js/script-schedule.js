@@ -192,8 +192,8 @@ class GestionnaireEmploiDuTemps {
                 <div class="schedule-page-class-cell">
                   <div class="schedule-page-class-card ${coursTrouve.categorie}">
                     <div class="schedule-page-class-card-title">${coursTrouve.matiere}</div>
-                    <div class="schedule-page-class-card-room">📍 ${coursTrouve.salle}</div>
-                    <div class="schedule-page-class-card-professor">👨‍🏫 ${coursTrouve.professeur}</div>
+                    <div class="schedule-page-class-card-room">${coursTrouve.salle}</div>
+                    <div class="schedule-page-class-card-professor">${coursTrouve.professeur}</div>
                     <div class="schedule-page-class-card-type">${coursTrouve.type}</div>
                   </div>
                 </div>
@@ -229,15 +229,12 @@ class GestionnaireEmploiDuTemps {
           <div class="schedule-page-upcoming-event-title">${evenement.titre}</div>
           <div class="schedule-page-upcoming-event-details">
             <div class="schedule-page-upcoming-event-detail-item">
-              <span>📚</span>
               <span>${evenement.matiere}</span>
             </div>
             <div class="schedule-page-upcoming-event-detail-item">
-              <span>🕐</span>
               <span>${evenement.heure}</span>
             </div>
             <div class="schedule-page-upcoming-event-detail-item">
-              <span>📍</span>
               <span>${evenement.salle}</span>
             </div>
           </div>
@@ -352,5 +349,5 @@ class GestionnaireEmploiDuTemps {
  */
 document.addEventListener('DOMContentLoaded', () => {
   const gestionnaireEmploiDuTemps = new GestionnaireEmploiDuTemps();
-  console.log('✅ Page de l\'emploi du temps initialisée');
+  console.log('Page de l\'emploi du temps initialisée');
 });

@@ -320,7 +320,6 @@ class GestionnaireNotes {
           <div class="grades-page-grade-card-assignment-name">${note.devoir}</div>
           <div class="grades-page-grade-card-meta-info">
             <div class="grades-page-grade-card-meta-item">
-              <span>📅</span>
               <span>${note.date}</span>
             </div>
             <div class="grades-page-grade-card-meta-item">
@@ -435,5 +434,5 @@ class GestionnaireNotes {
  */
 document.addEventListener('DOMContentLoaded', () => {
   const gestionnaireNotes = new GestionnaireNotes();
-  console.log('✅ Page des notes initialisée');
+  console.log('Page des notes initialisée');
 });
