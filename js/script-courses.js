@@ -31,7 +31,7 @@ class GestionnaireCours {
         nomProfesseur: 'Pr. Jean Dupont',
         description: 'Étude des équations différentielles et de l\'analyse complexe.',
         categorie: 'math',
-        icone: '📐',
+        icone: '',
         nombreEtudiants: 120,
         nombreDevoirs: 8,
         pourcentageProgression: 85,
@@ -43,7 +43,7 @@ class GestionnaireCours {
         nomProfesseur: 'Dr. Marie Curie',
         description: 'Introduction aux principes fondamentaux de la mécanique quantique.',
         categorie: 'science',
-        icone: '⚛️',
+        icone: '',
         nombreEtudiants: 85,
         nombreDevoirs: 6,
         pourcentageProgression: 72,
@@ -55,7 +55,7 @@ class GestionnaireCours {
         nomProfesseur: 'M. Alan Turing',
         description: 'Développement web moderne avec React, Node.js et les bases de données.',
         categorie: 'tech',
-        icone: '💻',
+        icone: '',
         nombreEtudiants: 150,
         nombreDevoirs: 12,
         pourcentageProgression: 90,
@@ -67,7 +67,7 @@ class GestionnaireCours {
         nomProfesseur: 'Dr. Grace Hopper',
         description: 'Conception et gestion des bases de données relationnelles et NoSQL.',
         categorie: 'tech',
-        icone: '🗄️',
+        icone: '',
         nombreEtudiants: 95,
         nombreDevoirs: 7,
         pourcentageProgression: 65,
@@ -79,7 +79,7 @@ class GestionnaireCours {
         nomProfesseur: 'Pr. Donald Knuth',
         description: 'Analyse et conception d\'algorithmes avancés pour la résolution de problèmes.',
         categorie: 'tech',
-        icone: '🔀',
+        icone: '',
         nombreEtudiants: 75,
         nombreDevoirs: 10,
         pourcentageProgression: 58,
@@ -91,7 +91,7 @@ class GestionnaireCours {
         nomProfesseur: 'Ms. Jane Smith',
         description: 'Anglais spécialisé pour les sciences et technologies.',
         categorie: 'language',
-        icone: '🌐',
+        icone: '',
         nombreEtudiants: 200,
         nombreDevoirs: 4,
         pourcentageProgression: 100,
@@ -103,7 +103,7 @@ class GestionnaireCours {
         nomProfesseur: 'Dr. Tim Berners-Lee',
         description: 'Architecture des réseaux, protocoles et sécurité réseau.',
         categorie: 'tech',
-        icone: '🌐',
+        icone: '',
         nombreEtudiants: 110,
         nombreDevoirs: 5,
         pourcentageProgression: 45,
@@ -115,7 +115,7 @@ class GestionnaireCours {
         nomProfesseur: 'Pr. Geoffrey Hinton',
         description: 'Introduction au machine learning et aux réseaux de neurones.',
         categorie: 'tech',
-        icone: '🤖',
+        icone: '',
         nombreEtudiants: 180,
         nombreDevoirs: 0,
         pourcentageProgression: 0,
@@ -227,9 +227,6 @@ class GestionnaireCours {
     return `
       <div class="courses-page-course-card-container">
         <div class="courses-page-course-card-header-section">
-          <div class="courses-page-course-card-icon-container ${cours.categorie}">
-            ${cours.icone}
-          </div>
           <div>
             <h3 class="courses-page-course-card-title">${cours.nomCours}</h3>
             <p class="courses-page-course-card-professor">${cours.nomProfesseur}</p>
@@ -241,11 +238,9 @@ class GestionnaireCours {
           
           <div class="courses-page-course-card-meta-info">
             <div class="courses-page-course-card-meta-item">
-              <span>👥</span>
               <span>${cours.nombreEtudiants} étudiants</span>
             </div>
             <div class="courses-page-course-card-meta-item">
-              <span>📝</span>
               <span>${cours.nombreDevoirs} devoirs</span>
             </div>
           </div>
@@ -317,5 +312,5 @@ class GestionnaireCours {
  */
 document.addEventListener('DOMContentLoaded', () => {
   const gestionnaireCours = new GestionnaireCours();
-  console.log('✅ Page des cours initialisée');
+  console.log('Page des cours initialisée');
 });

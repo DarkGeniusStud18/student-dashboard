@@ -151,8 +151,9 @@
 }
 
 .login-page-form-error-message::before {
-  content: '⚠️';
+  content: '!';
   font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .login-page-form-options-row {

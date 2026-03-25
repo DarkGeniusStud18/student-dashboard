@@ -225,5 +225,5 @@ class GestionnaireValidationConnexion {
  */
 document.addEventListener('DOMContentLoaded', () => {
   const gestionnaireConnexion = new GestionnaireValidationConnexion();
-  console.log('✅ Page de login initialisée');
+  console.log('Page de login initialisée');
 });

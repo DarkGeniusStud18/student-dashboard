@@ -67,7 +67,7 @@ class GestionnaireTableauDeBord {
     this.afficherDernieresNotes();
     this.mettreAJourStatistiques();
     
-    console.log('✅ Tableau de bord initialisé');
+    console.log('Tableau de bord initialisé');
   }
   
   /**
